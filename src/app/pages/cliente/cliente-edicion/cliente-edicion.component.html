@@ -1,0 +1,28 @@
+<h1>Ingrese los datos del cliente</h1>
+
+<form class="example-container" [formGroup]="form" (ngSubmit)="enviar()">
+
+    <div [hidden]="true">
+        <mat-form-field class="example-full-width">
+            <input matInput placeholder="Cliente" required formControlName="cliente">
+        </mat-form-field>
+    </div>
+
+    <mat-form-field class="example-full-width">
+        <input matInput placeholder="nombre" minlength="3" required formControlName="nombre">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+        <input matInput placeholder="documento" required formControlName="documento">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+        <input matInput placeholder="direccion" required formControlName="direccion">
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" type="submit">
+        <mat-icon>done</mat-icon>
+        <span>Enviar</span>
+    </button>
+
+</form>
